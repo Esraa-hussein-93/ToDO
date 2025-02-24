@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|c:\\users\\asmaa\\desktop\\to do task\\todo\\todo\\areas\\employee\\views\\item\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|solutionrelative:todo\\areas\\employee\\views\\item\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|c:\\users\\asmaa\\desktop\\to do task\\todo\\todo\\areas\\employee\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|solutionrelative:todo\\areas\\employee\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|c:\\users\\asmaa\\desktop\\to do task\\todo\\todo\\areas\\employee\\views\\item\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|solutionrelative:todo\\areas\\employee\\views\\item\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|c:\\users\\asmaa\\desktop\\to do task\\todo\\todo\\areas\\employee\\views\\item\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|solutionrelative:todo\\areas\\employee\\views\\item\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|c:\\users\\asmaa\\desktop\\to do task\\todo\\todo\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B895263B-A43A-4CC7-A62B-CE45089AFB5E}|ToDo\\ToDo.csproj|solutionrelative:todo\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 325,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "ToDo\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Models\\Item.cs",
+              "RelativeToolTip": "ToDo\\Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T16:15:14.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Create.cshtml",
+              "RelativeDocumentMoniker": "ToDo\\Areas\\Employee\\Views\\Item\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Create.cshtml",
+              "RelativeToolTip": "ToDo\\Areas\\Employee\\Views\\Item\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T13:10:12.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Controllers\\ItemController.cs",
+              "RelativeDocumentMoniker": "ToDo\\Areas\\Employee\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Controllers\\ItemController.cs",
+              "RelativeToolTip": "ToDo\\Areas\\Employee\\Controllers\\ItemController.cs",
+              "ViewState": "AgIAAAMAAACAlkWO2k8bwBAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T12:58:14.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Index.cshtml",
+              "RelativeDocumentMoniker": "ToDo\\Areas\\Employee\\Views\\Item\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Index.cshtml",
+              "RelativeToolTip": "ToDo\\Areas\\Employee\\Views\\Item\\Index.cshtml",
+              "ViewState": "AgIAADAAAABAWWSm6u4iwE4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T13:40:41.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ToDo\\Areas\\Employee\\Views\\Item\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Asmaa\\Desktop\\To Do Task\\ToDo\\ToDo\\Areas\\Employee\\Views\\Item\\Edit.cshtml",
+              "RelativeToolTip": "ToDo\\Areas\\Employee\\Views\\Item\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T11:50:11.36Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 75,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 75,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

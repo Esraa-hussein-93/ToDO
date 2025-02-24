@@ -1,0 +1,197 @@
+﻿@* @{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="successMessage" class="alert alert-success">
+        @successMessage
+    </div>
+
+    <script type="text/javascript">
+        // Set a timeout to hide the message after 6 seconds (6000 milliseconds)
+        setTimeout(function () {
+            var messageElement = document.getElementById("successMessage");
+            if (messageElement) {
+                messageElement.style.display = "none";
+            }
+        }, 6000); // 6000 ms = 6 seconds
+    </script>
+}
+مش شغال 
+ *@ 
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1>Tasks To Do</h1>
+                <a class="btn custom-blue-button" href="/Employee/Item/Create">Create New Item To Do</a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr class="bg-dark text-white">
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">DeadLine</th>
+                            <th scope="col">File</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th scope="row">@item.Id</th>
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td>@item.DeadLine</td>
+                                <td>
+                                    @item.File
+                                    @if (!string.IsNullOrEmpty(item.File))
+                                    {
+                                        <a class="btn download-button btn-sm" href="/Employee/Item/Download?Id=@item.Id" role="button">Download</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="no-file">No File</span>
+                                    }
+                                </td>
+
+
+                                <td>
+                                    <a class="btn edit-button btn-sm" href="/Employee/Item/Edit?Id=@item.Id">Edit</a>
+                                    <a class="btn delete-button btn-sm" href="/Employee/Item/Delete?Id=@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(Id) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "This action cannot be undone!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#6c757d",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "Cancel"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/Employee/Item/Delete?Id=" + Id;
+                }
+            });
+        }
+    </script>
+}
+
+<style>
+    .custom-blue-button {
+        background-color: #007bff; /* Custom blue color */
+        color: white; /* Text color */
+        padding: 15px 30px; /* Button padding: increased for a more prominent look */
+        margin: 20px; /* Margin around the button */
+        text-decoration: none; /* Remove underline from the link */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 18px; /* Font size */
+        display: inline-block; /* Make sure it's displayed as a block element for spacing */
+    }
+
+    .custom-blue-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    /* Edit Button */
+    .edit-button {
+        background-color: #ffc107; /* Yellow background */
+        color: black; /* black text */
+        padding: 8px 16px; /* Padding for the button */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 14px; /* Font size */
+        text-decoration: none; /* Remove underline from the link */
+    }
+
+        .edit-button:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+        }
+
+    .no-file {
+        color: #6c757d; /* Gray color */
+        font-size: 14px; /* Font size */
+        font-style: italic; /* Italic style for emphasis */
+    }
+    /* Delete Button */
+    .delete-button {
+        background-color: #dc3545; /* Red background for danger */
+        color: white; /* White text */
+        padding: 8px 16px; /* Padding for the button */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 14px; /* Font size */
+        text-decoration: none; /* Remove underline from the link */
+    }
+
+        .delete-button:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+    /* Download Button */
+    .download-button {
+        background-color: #6f42c1; /* Purple background */
+        color: white; /* White text */
+        padding: 8px 16px; /* Padding for the button */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 14px; /* Font size */
+        text-decoration: none; /* Remove underline from the link */
+    }
+
+        .download-button:hover {
+            background-color: #5a32a3; /* Darker purple on hover */
+        }
+
+
+    /* Table styling */
+    table.table-bordered {
+        border: 1px solid #dee2e6; /* Light gray border */
+    }
+
+        table.table-bordered th,
+        table.table-bordered td {
+            border: 1px solid #dee2e6; /* Light gray border for th and td */
+            padding: 12px 15px; /* Padding for cells */
+        }
+
+    table.table-hover tbody tr:hover {
+        background-color: #f8f9fa; /* Light gray hover effect for rows */
+    }
+
+    /* Centering the table */
+    .row.justify-content-center {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+    }
+
+    .col-12.col-md-10 {
+        padding: 0 15px; /* Add some padding to the left and right to give it spacing */
+    }
+
+    .container {
+        text-align: center;
+    }
+</style>
+<script type="text/javascript">
+    // Set a timeout to hide the message after 6 seconds (6000 milliseconds)
+    setTimeout(function () {
+        var messageElement = document.getElementById("successMessage");
+        if (messageElement) {
+            messageElement.style.display = "none";
+        }
+    }, 6000); // 6000 ms = 6 seconds
+</script>

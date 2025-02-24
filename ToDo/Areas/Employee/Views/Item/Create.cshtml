@@ -1,0 +1,152 @@
+﻿ @{
+    ViewData["Title"] = "Create New To-Do Item";
+}
+
+<div class="container my-3">
+<h1>Create New To-Do Item</h1>
+<form id="ToDoForm" method="post"  enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Title:</label><br>
+        <textarea class="form-control" id="Title" name="Title" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label><br>
+        <textarea class="form-control" id="Description" name="Description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="DeadLine">Deadline:</label><br>
+        <input type="datetime-local" class="form-control" id="DeadLine" name="DeadLine" required>
+    </div>
+        <div class="form-group">
+            <label for="File">File:</label><br>
+            <input type="file" class="form-control" id="File" name="file" >
+            <!-- Preview area -->
+            <div id="filePreview" style="margin-top: 10px;"></div>
+        </div>
+    <br />
+    <button type="submit" class="btn btn-primary" id="submitBtn">Create New</button>
+</form>
+</div>
+
+<script>
+
+    // Set the minimum date for the Deadline input field to the current date and time
+    window.onload = function() {
+        // Get the current date and time
+        var currentDate = new Date();
+
+        // Format the current date and time in the required format for the datetime-local input
+        var year = currentDate.getFullYear();
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Ensure two digits
+        var day = currentDate.getDate().toString().padStart(2, '0');
+        var hours = currentDate.getHours().toString().padStart(2, '0');
+        var minutes = currentDate.getMinutes().toString().padStart(2, '0');
+
+        // Create a string in the format YYYY-MM-DDTHH:MM
+        var minDate = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+        // Set the min attribute of the deadline input field
+        document.getElementById('DeadLine').setAttribute('min', minDate);
+    };
+    // Handle file input change and display preview
+    document.getElementById('File').addEventListener('change', function (event) {
+        var file = event.target.files[0];
+        var preview = document.getElementById('filePreview');
+
+        // Clear previous preview
+        preview.innerHTML = '';
+
+        if (file) {
+            // If the file is an image, show the image preview
+            if (file.type.startsWith('image/')) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '20%'; // Set the image max-width for better display
+                    img.style.maxHeight = '20%';
+                    preview.appendChild(img);
+                };
+                reader.readAsDataURL(file); // Read the file as data URL
+            } else {
+                // If the file is not an image, just show the file name
+                preview.textContent = `Selected file: ${file.name}`;
+            }
+        }
+    });
+</script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 30px auto; /* Center the container */
+        padding: 20px;
+    }
+
+    .form-container {
+        width: 70%; /* Takes up 70% of the width */
+        margin: 0 auto; /* Centers the form horizontally */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        /* Label styling */
+        .form-group label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+    .form-control {
+        width: 100%; /* Make the form controls take up 100% of the container width */
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    #submitBtn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%; /* Button should take up full width */
+    }
+
+        #submitBtn:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+
+

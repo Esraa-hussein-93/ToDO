@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh; flex-direction: column;">
+    <!-- Centered Heading with margin-top -->
+    <h1 class="display-4" style="margin-top: 50px;">Welcome</h1>
+
+    <!-- Layout alignment with proper margin and padding for the button -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <!-- Custom blue button with margin and padding -->
+            <a class="btn custom-blue-button" href="/Employee/Item/Index">Create New</a>
+        </div>
+    </div>
+</div>
+<style>
+    .custom-blue-button {
+        background-color: #007bff; /* Custom blue color */
+        color: white; /* Text color */
+        padding: 15px 30px; /* Button padding: increased for a more prominent look */
+        margin: 20px; /* Margin around the button */
+        text-decoration: none; /* Remove underline from the link */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 18px; /* Font size */
+        display: inline-block; /* Make sure it's displayed as a block element for spacing */
+    }
+
+        .custom-blue-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    /* Ensures content inside the container is centered */
+    .container {
+        text-align: center;
+    }
+</style>
